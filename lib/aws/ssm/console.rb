@@ -1,4 +1,4 @@
-require "aws/ssm/console/version"
+require 'aws/ssm/console/version'
 
 module Aws
   module SSM
