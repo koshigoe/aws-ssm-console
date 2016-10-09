@@ -11,8 +11,13 @@ module Aws
         end
 
         def run
+          stty_save = `stty -g`.chomp
+          trap('INT') { system 'stty', stty_save; exit }
+
           loop do
-            command.invoke(Readline.readline('>> ', true))
+            cmd = Readline.readline('>> ', true)
+            break unless cmd
+            command.invoke(cmd)
           end
         end
       end
