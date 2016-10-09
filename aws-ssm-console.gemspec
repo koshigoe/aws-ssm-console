@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['koshigoe']
   spec.email         = ['koshigoeb@gmail.com']
 
-  spec.summary       = %q{REPL for AWS SSM.}
-  spec.description   = %q{REPL for AWS SSM.}
+  spec.summary       = 'REPL for AWS SSM.'
+  spec.description   = 'REPL for AWS SSM.'
   spec.homepage      = 'https://github.com/koshigoe/aws-ssm-console'
 
   spec.files         = `git ls-files -z`.split('\x0').reject { |f| f.match(%r{^(test|spec|features)/}) }
