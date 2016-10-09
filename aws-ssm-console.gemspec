@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Aws::Ssm::Console::VERSION
   spec.authors       = ['koshigoe']
   spec.email         = ['koshigoeb@gmail.com']
+  spec.license       = 'MIT'
 
   spec.summary       = 'REPL for AWS SSM.'
   spec.description   = 'REPL for AWS SSM.'
