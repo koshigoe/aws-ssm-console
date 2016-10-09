@@ -18,8 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
+### Configuration
+
+You should configure some environment variables to use AWS SDK.
+
+- `AWS_REGION`
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+
+### Run Command
+
 ```
-$ bin/aws-ssm-console
+$ bin/aws-ssm-console --instance-ids=i-xxxx,i-yyyy,...
 >> 
 ```
 
