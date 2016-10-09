@@ -1,7 +1,7 @@
 require "aws/ssm/console/version"
 
 module Aws
-  module Ssm
+  module SSM
     module Console
       # Your code goes here...
     end
