@@ -5,7 +5,7 @@ require 'aws/ssm/console/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'aws-ssm-console'
-  spec.version       = Aws::Ssm::Console::VERSION
+  spec.version       = Aws::SSM::Console::VERSION
   spec.authors       = ['koshigoe']
   spec.email         = ['koshigoeb@gmail.com']
   spec.license       = 'MIT'
