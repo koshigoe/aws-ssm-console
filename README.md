@@ -28,9 +28,18 @@ You should configure some environment variables to use AWS SDK.
 
 ### Run Command
 
+#### Interactive mode
+
 ```
 $ bin/aws-ssm-console --instance-ids=i-xxxx,i-yyyy,...
 >> 
+```
+
+#### Batch mode
+
+```
+$ bin/aws-ssm-console -c ls --instance-ids=i-xxxx,i-yyyy,...
+...
 ```
 
 ## Development
