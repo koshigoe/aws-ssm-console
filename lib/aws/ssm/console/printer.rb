@@ -37,7 +37,7 @@ module Aws
             response = Aws::SSM::Console.client.list_command_invocations(command_id: command_id, instance_id: instance_id, details: true)
             response.command_invocations.each do |invocation|
               invocation.command_plugins.map do |command_plugin|
-                yield(instance_id, command_plugin.status, command_plugin.output.split("\n").map { |x| "\t#{x}" }.join("\n"))
+                yield(instance_id, command_plugin.status, command_plugin.output.to_s.split("\n").map { |x| "\t#{x}" }.join("\n"))
               end
             end
           end
