@@ -2,16 +2,5 @@
 
 require 'bundler/setup'
 require 'aws/ssm/console'
-require 'optparse'
 
-options = {}
-OptionParser.new do |opt|
-  opt.on('--instance-ids id,id,...', Array) { |v| options[:instance_ids] = v }
-  opt.on('-c command', String) { |v| options[:command] = v }
-
-  opt.parse!(ARGV)
-end
-
-raise ArgumentError, '--instance-ids is required' unless options[:instance_ids]
-
-Aws::SSM::Console.run(options)
+Aws::SSM::Console::CLI.new(ARGV).run
