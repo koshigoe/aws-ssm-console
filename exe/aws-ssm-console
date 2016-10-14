@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'bundler/setup'
+root = File.dirname(File.dirname(__FILE__))
+$:.unshift(File.join(root, 'lib'))
+
 require 'aws/ssm/console'
 
 Aws::SSM::Console::CLI.new(ARGV).run
