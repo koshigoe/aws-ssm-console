@@ -4,6 +4,10 @@ module Aws
   module SSM
     module Console
       class Runner
+        extend Forwardable
+
+        delegate invoke: :@command
+
         attr_reader :command
 
         def initialize(instance_ids)

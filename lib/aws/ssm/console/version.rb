@@ -1,7 +1,9 @@
 module Aws
   module SSM
     module Console
-      VERSION = '0.1.1'.freeze
+      GEMSPEC_PATH = File.expand_path('../../../../../aws-ssm-console.gemspec', __FILE__)
+      GEMSPEC = Gem::Specification.load(GEMSPEC_PATH)
+      VERSION = GEMSPEC.version.to_s.freeze
     end
   end
 end

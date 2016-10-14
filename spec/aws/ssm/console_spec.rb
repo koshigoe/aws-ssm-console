@@ -1,11 +1,13 @@
 require 'spec_helper'
 
-describe Aws::Ssm::Console do
+describe Aws::SSM::Console do
   it 'has a version number' do
-    expect(Aws::Ssm::Console::VERSION).not_to be nil
+    expect(Aws::SSM::Console::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  describe '.client' do
+    subject { described_class.client }
+
+    it { is_expected.to be_an_instance_of(Aws::SSM::Client) }
   end
 end
