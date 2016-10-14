@@ -25,7 +25,7 @@ RSpec.describe Aws::SSM::Console::Options, type: :lib do
         let(:argv) { %w() }
 
         it 'raise ArgumentError' do
-          expect { subject }.to raise_error(ArgumentError, '--instance-ids is required')
+          expect { subject }.to raise_error(ArgumentError, 'EC2 instance IDs required.')
         end
       end
     end
