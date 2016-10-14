@@ -31,14 +31,14 @@ You should configure some environment variables to use AWS SDK.
 #### Interactive mode
 
 ```
-$ bin/aws-ssm-console --instance-ids=i-xxxx,i-yyyy,...
+$ aws-ssm-console --instance-ids=i-xxxx,i-yyyy,...
 >> 
 ```
 
 #### Batch mode
 
 ```
-$ bin/aws-ssm-console -c ls --instance-ids=i-xxxx,i-yyyy,...
+$ aws-ssm-console -c ls --instance-ids=i-xxxx,i-yyyy,...
 ...
 ```
 
