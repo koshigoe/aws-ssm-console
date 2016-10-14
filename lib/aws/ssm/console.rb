@@ -11,8 +11,13 @@ module Aws
         @client ||= Aws::SSM::Client.new
       end
 
-      def self.run(instance_ids)
-        Aws::SSM::Console::Runner.new(instance_ids).run
+      def self.run(instance_ids:, command: nil)
+        runner = Aws::SSM::Console::Runner.new(instance_ids)
+        if command
+          runner.invoke(command)
+        else
+          runner.run
+        end
       end
     end
   end
