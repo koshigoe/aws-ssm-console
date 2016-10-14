@@ -1,12 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'aws-sdk-core'
-require 'aws/ssm/console/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'aws-ssm-console'
-  spec.version       = Aws::SSM::Console::VERSION
+  spec.version       = '0.1.1'
   spec.authors       = ['koshigoe']
   spec.email         = ['koshigoeb@gmail.com']
   spec.license       = 'MIT'
