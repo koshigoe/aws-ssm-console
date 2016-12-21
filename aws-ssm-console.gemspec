@@ -1,10 +1,14 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+m = Module.new do
+  module self::Anonymous
+    lib = File.expand_path('../lib', __FILE__)
+    eval File.read "#{lib}/aws/ssm/console/version.rb"
+  end
+end
 
 Gem::Specification.new do |spec|
   spec.name          = 'aws-ssm-console'
-  spec.version       = '0.2.2'
+  spec.version       = m::Anonymous::Aws::SSM::Console::VERSION
   spec.authors       = ['koshigoe']
   spec.email         = ['koshigoeb@gmail.com']
   spec.license       = 'MIT'
