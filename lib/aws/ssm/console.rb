@@ -1,5 +1,4 @@
 require 'aws-sdk'
-require 'aws/ssm/console/version'
 require 'aws/ssm/console/cli'
 require 'aws/ssm/console/options'
 require 'aws/ssm/console/runner'
